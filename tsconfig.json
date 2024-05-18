@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -18,6 +18,11 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
-    "strict": true
+    "moduleResolution": "Node"
+    // "strict": true
   },
+  // "ts-node": {
+  //   // Tell ts-node CLI to install the --loader automatically
+  //   "esm": true
+  // }
 }
