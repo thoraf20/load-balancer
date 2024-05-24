@@ -4,13 +4,10 @@ import * as http from "http";
 import { ServerPool } from "./index.js";
 
   async function healthCheck(
-    req: Request,
-    res: Response,
     server: ServerPool
   ): Promise<void> {
     const aliveChannel: boolean[] = [];
 
-    // Iteration over the available backends
     for (const backend of server.getBackends()) {
       // Defining a timeout for the health check
       const timeout = 10000; // 10 seconds
@@ -20,10 +17,9 @@ import { ServerPool } from "./index.js";
 
       // Set the alive status based on the result
       backend.isAlive = aliveChannel.pop() || false;
-      // backend.setAlive(aliveChannel.pop() || false);
     }
 
-    // res.status(200).send("Health check completed");
+    console.log("Health check completed");
   };
 
 

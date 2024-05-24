@@ -4,15 +4,15 @@ import { Backend, Mutex } from "../backend/index.js";
 const registerServers = [
   {
     url: "http://localhost:4004",
-    isAlive: false,
+    isAlive: true,
   },
   {
     url: "http://localhost:4005",
-    isAlive: false,
+    isAlive: true,
   },
   {
     url: "http://localhost:4003",
-    isAlive: true,
+    isAlive: false,
   },
 ];
 
