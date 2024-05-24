@@ -1,5 +1,5 @@
 import httpProxy from "http-proxy";
-import { Backend, Mutex } from "../backend/index.js";
+import { Mutex } from "../utils/index.js";
 
 const registerServers = [
   {
